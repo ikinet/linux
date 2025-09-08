@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: GPL-2.0-only
+// Copyright (c) 2013, The Linux Foundation. All rights reserved.
+
+static const struct drm_display_mode ams667uu01_mode = {
+	.clock = (1080 + 64 + 20 + 64) * (2400 + 34 + 20 + 34) * 60 / 1000,
+	.hdisplay = 1080,
+	.hsync_start = 1080 + 64,
+	.hsync_end = 1080 + 64 + 20,
+	.htotal = 1080 + 64 + 20 + 64,
+	.vdisplay = 2400,
+	.vsync_start = 2400 + 34,
+	.vsync_end = 2400 + 34 + 20,
+	.vtotal = 2400 + 34 + 20 + 34,
+	.width_mm = 695,
+	.height_mm = 1545,
+	.type = DRM_MODE_TYPE_DRIVER,
+};
+
+static const struct panel_desc_dsi ams667uu01 = {
+	.desc = {
+		.modes = &ams667uu01_mode,
+		.num_modes = 1,
+		.bpc = 8,
+		.size = {
+			.width = 695,
+			.height = 1545,
+		},
+		.connector_type = DRM_MODE_CONNECTOR_DSI,
+	},
+	.flags = MIPI_DSI_MODE_VIDEO_BURST | MIPI_DSI_CLOCK_NON_CONTINUOUS |
+		 MIPI_DSI_MODE_LPM,
+	.format = MIPI_DSI_FMT_RGB888,
+	.lanes = 4,
+};
