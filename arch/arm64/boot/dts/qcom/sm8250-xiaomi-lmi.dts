@@ -268,7 +268,7 @@
 };
 
 &adsp {
-	firmware-name = "qcom/sm8250/xiaomi/elish/adsp.mbn";
+	firmware-name = "qcom/sm8250/xiaomi/alioth/adsp.mbn";
 	status = "okay";
 };
 
@@ -582,7 +582,7 @@
 };
 
 &cdsp {
-	firmware-name = "qcom/sm8250/xiaomi/elish/cdsp.mbn";
+	firmware-name = "qcom/sm8250/xiaomi/alioth/cdsp.mbn";
 	status = "okay";
 };
 
@@ -615,7 +615,7 @@
 
 	zap-shader {
 		memory-region = <&gpu_mem>;
-		firmware-name = "qcom/sm8250/xiaomi/elish/a650_zap.mbn";
+		firmware-name = "qcom/sm8250/xiaomi/alioth/a650_zap.mbn";
 	};
 };
 
@@ -985,7 +985,7 @@
 	};
 
 &slpi {
-	firmware-name = "qcom/sm8250/xiaomi/elish/slpi.mbn";
+	firmware-name = "qcom/sm8250/xiaomi/alioth/slpi.mbn";
 	status = "okay";
 };
 
@@ -1176,6 +1176,6 @@
 };
 
 &venus {
-	firmware-name = "qcom/sm8250/xiaomi/elish/venus.mbn";
+	firmware-name = "qcom/sm8250/xiaomi/alioth/venus.mbn";
 	status = "okay";
 };
